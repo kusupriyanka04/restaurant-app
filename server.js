@@ -6,7 +6,7 @@ const productRoutes = require('./routes/products');
 const orderRoutes = require('./routes/orders');
 const adminRoutes = require('./routes/admin');
 
-
+const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -21,4 +21,6 @@ app.get('/', (req, res) => {
 res.send('Restaurant API Running');
 });
 
-app.listen(5000, () => console.log('Server running on port 5000'));
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

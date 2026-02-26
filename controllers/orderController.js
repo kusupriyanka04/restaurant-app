@@ -2,7 +2,7 @@ const supabase = require('../config/db');
 
 
 exports.placeOrder = async (req, res) => {
-const { user_id, total } = req.body;
+const { user_id, total, items } = req.body;
 
 
 try {
